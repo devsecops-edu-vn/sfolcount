@@ -511,7 +511,7 @@ fi
 
 if [ $headerfile_count -gt 0 ] ; then
   headerfile_rate=`echo "scale=6 ; ($headerfile_count/$TOTAL_FILES_LANGS)*100" | bc`
-  echo "Makefile:           $headerfile_count file(s) - ${headerfile_rate}%"
+  echo "File .h:            $headerfile_count file(s) - ${headerfile_rate}%"
 fi
 
 echo
