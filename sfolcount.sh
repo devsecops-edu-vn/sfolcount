@@ -328,13 +328,20 @@ makefile_count=$(find $1 -type f -name "Makefile" | wc -l)
 
 ###############################################################################
 
+# 31. *.h - File header của C và C++
+
+headerfile_count=$(find $1 -type f -name "*.h" | wc -l)
+
+###############################################################################
+
 # Tính tổng số file của các ngôn ngữ lập trình
 
 TOTAL_FILES_LANGS=`expr $ada_total + $assembly_total + $awk_total + $bash_total + $c_total + $cpp_total + \
   $cshell_total + $cobol_total + $csharp_total + $expect_total + $fortran_total + $go_total + \
   $haskell_total + $java_total + $lex_flex_total + $lisp_scheme_total + $modula3_total + \
   $node_javascript_total + $objectivec_total + $pascal_total + $perl_total + $php_total + \
-  $python_total + $ruby_total + $rust_total + $sed_total + $sql_total + $tcl_total + $yacc_bison_total + $makefile_count`
+  $python_total + $ruby_total + $rust_total + $sed_total + $sql_total + $tcl_total + $yacc_bison_total + \
+  $makefile_count + $headerfile_count`
 
 ###############################################################################
 
@@ -500,6 +507,11 @@ fi
 if [ $makefile_count -gt 0 ] ; then
   makefile_rate=`echo "scale=6 ; ($makefile_count/$TOTAL_FILES_LANGS)*100" | bc`
   echo "Makefile:           $makefile_count file(s) - ${makefile_rate}%"
+fi
+
+if [ $headerfile_count -gt 0 ] ; then
+  headerfile_rate=`echo "scale=6 ; ($headerfile_count/$TOTAL_FILES_LANGS)*100" | bc`
+  echo "Makefile:           $headerfile_count file(s) - ${headerfile_rate}%"
 fi
 
 echo
