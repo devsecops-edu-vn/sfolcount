@@ -59,7 +59,7 @@
 
 # 30. Makefile
 
-# 31. *.h là file header không chắc chắn là của C hay C++
+# 31. *.h là file header không chắc chắn là của C hay C++ và của Assembly luôn
 
 ###############################################################################
 
@@ -328,7 +328,7 @@ makefile_count=$(find $1 -type f -name "Makefile" | wc -l)
 
 ###############################################################################
 
-# 31. *.h - File header của C và C++
+# 31. *.h - File header của C và C++ và của Assembly lun
 
 headerfile_count=$(find $1 -type f -name "*.h" | wc -l)
 
