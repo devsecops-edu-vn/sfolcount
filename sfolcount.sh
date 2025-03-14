@@ -336,6 +336,16 @@ headerfile_count=$(find $1 -type f -name "*.h" | wc -l)
 
 ###############################################################################
 
+# 32. CMakeLists.txt, .cmake - Các file của công cụ CMake - Thường xài cho C và C++
+
+cmake_count0=$(find $1 -type f -name 'CMakeLists.txt' | wc -l)
+
+cmake_count1=$(find $1 -type f -name "*.cmake" | wc -l)
+
+cmake_total=`expr $cmake_count0 + $cmake_count1`
+
+###############################################################################
+
 # Tính tổng số file của các ngôn ngữ lập trình
 
 TOTAL_FILES_LANGS=`expr $ada_total + $assembly_total + $awk_total + $bash_total + $c_total + $cpp_total + \
@@ -343,7 +353,7 @@ TOTAL_FILES_LANGS=`expr $ada_total + $assembly_total + $awk_total + $bash_total 
   $haskell_total + $java_total + $lex_flex_total + $lisp_scheme_total + $modula3_total + \
   $node_javascript_total + $objectivec_total + $pascal_total + $perl_total + $php_total + \
   $python_total + $ruby_total + $rust_total + $sed_total + $sql_total + $tcl_total + $yacc_bison_total + \
-  $makefile_count + $headerfile_count`
+  $makefile_count + $headerfile_count + $cmake_total`
 
 ###############################################################################
 
@@ -514,6 +524,11 @@ fi
 if [ $headerfile_count -gt 0 ] ; then
   headerfile_rate=`echo "scale=6 ; ($headerfile_count/$TOTAL_FILES_LANGS)*100" | bc`
   echo "File .h:            $headerfile_count file(s) - ${headerfile_rate}%"
+fi
+
+if [ $cmake_total -gt 0 ] ; then
+  cmake_rate=`echo "scale=6 ; ($cmake_total/$TOTAL_FILES_LANGS)*100" | bc`
+  echo "CMake:              $cmake_total file(s) - ${cmake_rate}%"
 fi
 
 echo
