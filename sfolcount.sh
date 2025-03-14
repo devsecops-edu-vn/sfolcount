@@ -61,6 +61,8 @@
 
 # 31. *.h là file header không chắc chắn là của C hay C++ và của Assembly luôn
 
+# 32. CMakeLists.txt, .cmake là các file của công cụ CMake - Thường xài cho C và C++
+
 ###############################################################################
 
 #  1. Ada (.ada, .ads, .adb)
