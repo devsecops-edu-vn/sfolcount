@@ -48,7 +48,7 @@
 # 22. PHP (.php, .php[3456s], .phtml, .inc) as of version 2.05 - Tui thêm .phps, .phtml
 
 # 23. Python (.py)
-# 24. Ruby (.rb) as of version 2.09
+# 24. Ruby (.rb, .gemspec, gem) - Tui thêm
 
 # 25. Rust (.rs) - Tui thêm
 
