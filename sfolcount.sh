@@ -274,11 +274,15 @@ python_total=$python_count0
 
 ###############################################################################
 
-# 24. Ruby (.rb) as of version 2.09
+# 24. Ruby (.rb, .gemspec, gem) - Tui thêm .gemspec và gem
 
 ruby_count0=$(find $1 -type f -name "*.rb" | wc -l)
 
-ruby_total=$ruby_count0
+ruby_count1=$(find $1 -type f -name "*.gemspec" | wc -l)
+
+ruby_count2=$(find $1 -type f -name 'gem' | wc -l)
+
+ruby_total=`expr $ruby_count0 + $ruby_count1 + $ruby_count2`
 
 ###############################################################################
 
