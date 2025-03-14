@@ -344,7 +344,11 @@ headerfile_count=$(find $1 -type f -name "*.h" | wc -l)
 
 cmake_count0=$(find $1 -type f -name 'CMakeLists.txt' | wc -l)
 
-cmake_count1=$(find $1 -type f -name "*.cmake" | wc -l)
+# Có file CMake không phải tận cùng là .cmake 
+# --> mà dạng như: Config.cmake.in | protobuf-config.cmake.in | abslConfig.cmake.in
+# --> nên phải tìm ở dạng là *.cmake* như lệnh find bên dưới
+
+cmake_count1=$(find $1 -type f -name "*.cmake*" | wc -l)
 
 cmake_total=`expr $cmake_count0 + $cmake_count1`
 
