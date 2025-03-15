@@ -101,12 +101,11 @@ bash_total=$bash_count0
 
 ###############################################################################
 
-#  5. C (.c, .h, Makefile)
+#  5. C (.c)
 
-c_count0=$(find $1 -type f -name "*.c"      | wc -l)
-c_count1=$(find $1 -type f -name "Makefile" | wc -l)
+c_count0=$(find $1 -type f -name "*.c" | wc -l)
 
-c_total=`expr $c_count0 + $c_count1`
+c_total=$c_count0
 
 ###############################################################################
 
