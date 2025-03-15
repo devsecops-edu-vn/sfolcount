@@ -57,11 +57,11 @@
 # 28. TCL (.tcl, .tk, .itk)
 # 29. Yacc/Bison (.y)
 
-# 30. Makefile
+# 30. Makefile, Makefile.in, .mk - Công cụ để chỉ ra cách biên dịch C hoặc C++
 
 # 31. *.h là file header không chắc chắn là của C hay C++ và của Assembly luôn
 
-# 32. CMakeLists.txt, .cmake là các file của công cụ CMake - Thường xài cho C và C++
+# 32. CMakeLists.txt, .cmake, .cmake.in là các file của công cụ CMake - Thường xài cho C và C++
 
 ###############################################################################
 
