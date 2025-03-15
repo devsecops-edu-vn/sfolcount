@@ -341,7 +341,7 @@ makefile_total=`expr $makefile_count0 + $makefile_count1 + $makefile_count2`
 
 # 31. *.h - File header của C và C++ và của Assembly lun
 
-headerfile_count=$(find $1 -type f -name "*.h" | wc -l)
+headerfile_total=$(find $1 -type f -name "*.h" | wc -l)
 
 ###############################################################################
 
@@ -528,12 +528,12 @@ fi
 
 if [ $makefile_total -gt 0 ] ; then
   makefile_rate=`echo "scale=6 ; ($makefile_count/$TOTAL_FILES_LANGS)*100" | bc`
-  echo "Makefile:           $makefile_count file(s) - ${makefile_rate}%"
+  echo "Makefile:           $makefile_total file(s) - ${makefile_rate}%"
 fi
 
-if [ $headerfile_count -gt 0 ] ; then
-  headerfile_rate=`echo "scale=6 ; ($headerfile_count/$TOTAL_FILES_LANGS)*100" | bc`
-  echo "File .h:            $headerfile_count file(s) - ${headerfile_rate}%"
+if [ $headerfile_total -gt 0 ] ; then
+  headerfile_rate=`echo "scale=6 ; ($headerfile_total/$TOTAL_FILES_LANGS)*100" | bc`
+  echo "File .h:            $headerfile_total file(s) - ${headerfile_rate}%"
 fi
 
 if [ $cmake_total -gt 0 ] ; then
