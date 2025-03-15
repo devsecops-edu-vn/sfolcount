@@ -373,11 +373,11 @@ langs_rate=`echo "scale=6 ; ($TOTAL_FILES_LANGS/$TOTAL_FILES)*100" | bc`
 
 echo -e "\nTiếng Việt"
 echo    "Tổng số file của thư mục chứa mã nguồn:  $TOTAL_FILES"  
-echo    "Tổng số file của các ngôn ngữ lập trình: $TOTAL_FILES_LANGS file(s) - ${langs_rate}%"
+echo    "Tổng số file của các ngôn ngữ lập trình: $TOTAL_FILES_LANGS - ${langs_rate}%"
 
 echo -e "\nEnglish"
 echo    "Total                       files: $TOTAL_FILES"  
-echo -e "Total programming languages files: $TOTAL_FILES_LANGS file(s) - ${langs_rate}%\n"
+echo -e "Total programming languages files: $TOTAL_FILES_LANGS - ${langs_rate}%\n"
 
 if [ $ada_total -gt 0 ] ; then
   ada_rate=`echo "scale=6 ; ($ada_total/$TOTAL_FILES_LANGS)*100" | bc`
