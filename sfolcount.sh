@@ -525,7 +525,7 @@ if [ $yacc_bison_total -gt 0 ] ; then
 fi
 
 if [ $makefile_total -gt 0 ] ; then
-  makefile_rate=`echo "scale=6 ; ($makefile_count/$TOTAL_FILES_LANGS)*100" | bc`
+  makefile_rate=`echo "scale=6 ; ($makefile_total/$TOTAL_FILES_LANGS)*100" | bc`
   echo "Makefile:           $makefile_total file(s) - ${makefile_rate}%"
 fi
 
