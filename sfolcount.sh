@@ -103,9 +103,7 @@ bash_total=$bash_count0
 
 #  5. C (.c)
 
-c_count0=$(find $1 -type f -name "*.c" | wc -l)
-
-c_total=$c_count0
+c_total=$(find $1 -type f -name "*.c" | wc -l)
 
 ###############################################################################
 
