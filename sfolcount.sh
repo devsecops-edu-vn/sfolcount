@@ -37,31 +37,34 @@
 # 14. Java (.java)
 # 15. lex/flex (.l)
 # 16. LISP/Scheme (.el, .scm, .lsp, .jl)
-# 17. Modula-3 (.m3, .i3) as of version 2.07
 
-# 18. Node.js/Javascript (.js) - Tui thêm
+# 17. Lua (.lua)
 
-# 19. Objective-C (.m)
-# 20. Pascal (.p, .pas)
-# 21. Perl (.pl, .pm, .perl)
+# 18. Modula-3 (.m3, .i3) as of version 2.07
 
-# 22. PHP (.php, .php[3456s], .phtml, .inc) as of version 2.05 - Tui thêm .phps, .phtml
+# 19. Node.js/Javascript (.js) - Tui thêm
 
-# 23. Python (.py)
-# 24. Ruby (.rb, .gemspec, gem) - Tui thêm
+# 20. Objective-C (.m)
+# 21. Pascal (.p, .pas)
+# 22. Perl (.pl, .pm, .perl)
 
-# 25. Rust (.rs) - Tui thêm
+# 23. PHP (.php, .php[3456s], .phtml, .inc) as of version 2.05 - Tui thêm .phps, .phtml
 
-# 26. sed (.sed)
-# 27. SQL (.sql) - not normally shown.
-# 28. TCL (.tcl, .tk, .itk)
-# 29. Yacc/Bison (.y)
+# 24. Python (.py)
+# 25. Ruby (.rb, .gemspec, gem) - Tui thêm
 
-# 30. Makefile, Makefile.in, .mk - Công cụ để chỉ ra cách biên dịch C hoặc C++
+# 26. Rust (.rs) - Tui thêm
 
-# 31. *.h là file header không chắc chắn là của C hay C++ và của Assembly luôn
+# 27. sed (.sed)
+# 28. SQL (.sql) - not normally shown.
+# 29. TCL (.tcl, .tk, .itk)
+# 30. Yacc/Bison (.y)
 
-# 32. CMakeLists.txt, .cmake, .cmake.in là các file của công cụ CMake - Thường xài cho C và C++
+# 31. Makefile, Makefile.in, .mk - Công cụ để chỉ ra cách biên dịch C hoặc C++
+
+# 32. *.h là file header không chắc chắn là của C hay C++ và của Assembly luôn
+
+# 33. CMakeLists.txt, .cmake, .cmake.in là các file của công cụ CMake - Thường xài cho C và C++
 
 ###############################################################################
 
@@ -204,7 +207,13 @@ lisp_scheme_total=`expr $lisp_scheme_count0 + $lisp_scheme_count1 + $lisp_scheme
 
 ###############################################################################
 
-# 17. Modula-3 (.m3, .i3) as of version 2.07
+# 17. Lua (.lua)
+
+lua_total=$(find $1 -type f -name "*.lua" | wc -l)
+
+###############################################################################
+
+# 18. Modula-3 (.m3, .i3) as of version 2.07
 
 modula3_count0=$(find $1 -type f -name "*.m3" | wc -l)
 modula3_count1=$(find $1 -type f -name "*.i3" | wc -l)
@@ -213,7 +222,7 @@ modula3_total=`expr $modula3_count0 + $modula3_count1`
 
 ###############################################################################
 
-# 18. Node.js/Javascript (.js) - Tui thêm
+# 19. Node.js/Javascript (.js) - Tui thêm
 
 node_javascript_count0=$(find $1 -type f -name "*.js" | wc -l)
 
@@ -221,7 +230,7 @@ node_javascript_total=$node_javascript_count0
 
 ###############################################################################
 
-# 19. Objective-C (.m)
+# 20. Objective-C (.m)
 
 objectivec_count0=$(find $1 -type f -name "*.m" | wc -l)
 
@@ -229,7 +238,7 @@ objectivec_total=$objectivec_count0
 
 ###############################################################################
 
-# 20. Pascal (.p, .pas)
+# 21. Pascal (.p, .pas)
 
 pascal_count0=$(find $1 -type f -name "*.p"   | wc -l)
 pascal_count1=$(find $1 -type f -name "*.pas" | wc -l)
@@ -238,7 +247,7 @@ pascal_total=`expr $pascal_count0 + $pascal_count1`
 
 ###############################################################################
 
-# 21. Perl (.pl, .pm, .perl)
+# 22. Perl (.pl, .pm, .perl)
 
 perl_count0=$(find $1 -type f -name "*.pl"   | wc -l)
 perl_count1=$(find $1 -type f -name "*.pm"   | wc -l)
@@ -248,7 +257,7 @@ perl_total=`expr $perl_count0 + $perl_count1 + $perl_count2`
 
 ###############################################################################
 
-# 22. PHP (.php, .php[3456s], .phtml, .inc) as of version 2.05 - Tui thêm
+# 23. PHP (.php, .php[3456s], .phtml, .inc) as of version 2.05 - Tui thêm
 
 php_count0=$(find $1 -type f -name "*.php"   | wc -l)
 php_count1=$(find $1 -type f -name "*.php3"  | wc -l)
@@ -263,7 +272,7 @@ php_total=`expr $php_count0 + $php_count1 + $php_count2 + $php_count3 + $php_cou
 
 ###############################################################################
 
-# 23. Python (.py)
+# 24. Python (.py)
 
 python_count0=$(find $1 -type f -name "*.py" | wc -l)
 
@@ -271,7 +280,7 @@ python_total=$python_count0
 
 ###############################################################################
 
-# 24. Ruby (.rb, .gemspec, gem) - Tui thêm .gemspec và gem
+# 25. Ruby (.rb, .gemspec, gem) - Tui thêm .gemspec và gem
 
 ruby_count0=$(find $1 -type f -name "*.rb" | wc -l)
 
@@ -283,7 +292,7 @@ ruby_total=`expr $ruby_count0 + $ruby_count1 + $ruby_count2`
 
 ###############################################################################
 
-# 25. Rust (.rs) - Tui thêm
+# 26. Rust (.rs) - Tui thêm
 
 rust_count0=$(find $1 -type f -name "*.rs" | wc -l)
 
@@ -291,7 +300,7 @@ rust_total=$rust_count0
 
 ###############################################################################
 
-# 26. sed (.sed)
+# 27. sed (.sed)
 
 sed_count0=$(find $1 -type f -name "*.sed" | wc -l)
 
@@ -299,7 +308,7 @@ sed_total=$sed_count0
 
 ###############################################################################
 
-# 27. SQL (.sql) - not normally shown.
+# 28. SQL (.sql) - not normally shown.
 
 sql_count0=$(find $1 -type f -name "*.sql" | wc -l)
 
@@ -307,7 +316,7 @@ sql_total=$sql_count0
 
 ###############################################################################
 
-# 28. TCL (.tcl, .tk, .itk)
+# 29. TCL (.tcl, .tk, .itk)
 
 tcl_count0=$(find $1 -type f -name "*.tcl" | wc -l)
 tcl_count1=$(find $1 -type f -name "*.tk"  | wc -l)
@@ -317,7 +326,7 @@ tcl_total=`expr $tcl_count0 + $tcl_count1 + $tcl_count2`
 
 ###############################################################################
 
-# 29. Yacc/Bison (.y)
+# 30. Yacc/Bison (.y)
 
 yacc_bison_count0=$(find $1 -type f -name "*.y" | wc -l)
 
@@ -325,7 +334,7 @@ yacc_bison_total=$yacc_bison_count0
 
 ###############################################################################
 
-# 30. Makefile, Makefile.in, .mk - Thường viết bằng Bash shell
+# 31. Makefile, Makefile.in, .mk - Thường viết bằng Bash shell
 
 makefile_count0=$(find $1 -type f -name "Makefile" | wc -l)
 
@@ -337,13 +346,13 @@ makefile_total=`expr $makefile_count0 + $makefile_count1 + $makefile_count2`
 
 ###############################################################################
 
-# 31. *.h - File header của C và C++ và của Assembly lun
+# 32. *.h - File header của C và C++ và của Assembly lun
 
 headerfile_total=$(find $1 -type f -name "*.h" | wc -l)
 
 ###############################################################################
 
-# 32. CMakeLists.txt, .cmake, .cmake.in là các file của công cụ CMake - Thường xài cho C và C++
+# 33. CMakeLists.txt, .cmake, .cmake.in là các file của công cụ CMake - Thường xài cho C và C++
 
 cmake_count0=$(find $1 -type f -name 'CMakeLists.txt' | wc -l)
 
@@ -361,7 +370,7 @@ TOTAL_FILES_LANGS=`expr $ada_total + $assembly_total + $awk_total + $bash_total 
   $haskell_total + $java_total + $lex_flex_total + $lisp_scheme_total + $modula3_total + \
   $node_javascript_total + $objectivec_total + $pascal_total + $perl_total + $php_total + \
   $python_total + $ruby_total + $rust_total + $sed_total + $sql_total + $tcl_total + $yacc_bison_total + \
-  $makefile_total + $headerfile_count + $cmake_total`
+  $makefile_total + $headerfile_count + $cmake_total + $lua_total`
 
 ###############################################################################
 
@@ -457,6 +466,11 @@ fi
 if [ $lisp_scheme_total -gt 0 ] ; then
   lisp_scheme_rate=`echo "scale=6 ; ($lisp_scheme_total/$TOTAL_FILES_LANGS)*100" | bc`
   echo "LISP/Scheme:        $lisp_scheme_total file(s) - ${lisp_scheme_rate}%"
+fi
+
+if [ $lua_total -gt 0 ] ; then
+  lua_rate=`echo "scale=6 ; ($lua_total/$TOTAL_FILES_LANGS)*100" | bc`
+  echo "Lua:                $lua_total file(s) - ${lua_rate}%"
 fi
 
 if [ $modula3_total -gt 0 ] ; then
